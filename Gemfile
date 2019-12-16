@@ -63,8 +63,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'pry-rails'
 gem 'devise'
-gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
-gem 'bootstrap-material-design', '0.1.4'
+# gem 'therubyracer' mini_racerが最新
+gem 'mini_racer'
+gem 'bootstrap'
 gem 'jquery-rails'
 gem "font-awesome-rails"
