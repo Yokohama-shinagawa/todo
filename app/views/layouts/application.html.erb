@@ -10,8 +10,12 @@
   <header>
     <div class="bg-info clearfix">
       <p type="text" class="float-left">Todoアプリ</p>
-      <%= link_to "ログイン",new_user_session_path, class:"btn btn-secondary float-right" %>
-      <%= link_to "新規登録",user_registration_path, method: :post, class:"btn btn-secondary float-right" %>
+      <% if user_signed_in? %>
+        <%= link_to "ログアウト",destroy_user_session_path, method: :delete,class:"btn btn-secondary float-right" %>
+      <% else %>
+        <%= link_to "ログイン",new_user_session_path, class:"btn btn-secondary float-right" %>
+        <%= link_to "新規登録",user_registration_path, method: :post, class:"btn btn-secondary float-right" %>
+      <% end %>
     </div>
   </header>
   <body>

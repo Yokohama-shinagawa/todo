@@ -68,3 +68,11 @@ gem 'mini_racer'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem "font-awesome-rails"
+#アプリの名前変更
+gem 'rename'
+#deviseの日本語化
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+#新規登録時の画像の追加
+gem 'carrierwave'
+gem 'rmagick'
