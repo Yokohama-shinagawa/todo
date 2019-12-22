@@ -6,11 +6,13 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- レスポンシブ対応-->
   </head>
+  <body>
   <header>
     <div class="bg-info clearfix">
       <p type="text" class="float-left">Todoアプリ</p>
-      <%= link_to "Todoアプリ","/users/index",class:"float-left" %>
       <% if user_signed_in? %>
         <%= link_to "ログアウト",destroy_user_session_path, method: :delete,class:"btn btn-secondary float-right" %>
         <%= link_to "マイページ",user_path(current_user),class:"btn btn-secondary float-right" %>
@@ -20,7 +22,6 @@
       <% end %>
     </div>
   </header>
-  <body>
     <%= yield %>
   </body>
 </html>
