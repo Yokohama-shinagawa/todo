@@ -67,6 +67,8 @@ gem 'devise'
 gem 'mini_racer'
 gem 'bootstrap'
 gem 'jquery-rails'
+#jQuery UIの 
+gem 'jquery-ui-rails'
 gem "font-awesome-rails"
 #アプリの名前変更
 gem 'rename'

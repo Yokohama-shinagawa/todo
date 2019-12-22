@@ -1,4 +1,16 @@
-ユーザ名：<%= current_user.email %>
+<div class="mx-auto" style="width: 200px;">
+  <div class="mypage">
+    ユーザ名：<%= current_user.email %>
+    <div class="btn-group">
+    <%= link_to("編集",edit_user_registration_path,class:"user-edit-btn btn btn-primary") %>
+    <button type="button" class="btn btn-danger user-destroy-btn">アカウント削除</button>
+    </div>
+  </div>
+</div>
 
-<%= link_to("編集",edit_user_registration_path) %>
 
+<div class="user-destroy-form none">
+  <p>本当に削除しますか？</p>
+  <%=link_to("はい", user_registration_path,method: :delete,class: "btn btn-primary") %>
+  <button type="button" class="btn btn-danger reject-btn">いいえ</button>
+</div>
