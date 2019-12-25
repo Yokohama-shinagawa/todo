@@ -1,3 +1,19 @@
+<div>
+    <%= render("top/shared/todo") %>
+</div>
 <div class="container">
-  Topページです
+  <div class="row">
+    <div class="col-md user-todos mx-3 mt-5 h-75">
+      するべきこと
+      <% @userTodos.each do |todo|%>
+        <p class="list-text mx-2 my-3 px-2 py-3"><%= todo.text%></p>
+      <% end %>
+    </div>
+    <div class="col-md user-workings mx-3 mt-5 h-75">
+      コンテンツB
+    </div>
+    <div class="col-md user-dones mx-3 mt-5 h-75">
+      コンテンツC
+    </div>
+  </div>
 </div>

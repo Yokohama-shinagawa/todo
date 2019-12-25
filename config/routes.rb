@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root "top#index"
   
   resources :users, only: [:show,:destroy]
+  
+  resources :user_todos, only: [:create]
 end
