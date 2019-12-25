@@ -1,0 +1,4 @@
+<%= form_for(@userTodo, :url => {:controller => :user_todos, :action => :create}) do |f| %>
+    <%= f.label :やるべきこと %> <%= f.text_field :text, id: :text %>
+    <%= f.submit "追加"%>
+<% end %>

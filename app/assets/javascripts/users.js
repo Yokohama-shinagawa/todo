@@ -8,3 +8,5 @@ $(document).on('turbolinks:load', function(){
      $(".user-destroy-form").addClass("none");
       });  
   });
+  
+  
