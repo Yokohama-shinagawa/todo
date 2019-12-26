@@ -1,7 +1,8 @@
 class UserTodosController < ApplicationController
   def create
-      @userTodo = UserTodo.create(todo_params)
- 
+      @userTodo = UserTodo.create(text: todo_params[:text],
+                                  user_id: current_user.id
+                                  )
       redirect_to("/")
   end
   

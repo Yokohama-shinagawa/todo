@@ -5,15 +5,31 @@
   <div class="row">
     <div class="col-md user-todos mx-3 mt-5 h-75">
       するべきこと
-      <% @userTodos.each do |todo|%>
-        <p class="list-text mx-2 my-3 px-2 py-3"><%= todo.text%></p>
+      <% if @userTodos %>
+        <% @userTodos.each do |todo|%>
+          <p class="list-text mx-2 my-3 px-2 py-3"><%= todo.text%></br>
+            <%= link_to("作業開始","/user_workings/#{todo.id}",method: :post) %>
+          </p>
+        <% end %>
       <% end %>
     </div>
     <div class="col-md user-workings mx-3 mt-5 h-75">
-      コンテンツB
+      作業中
+      <% if @userWorkings%>
+        <% @userWorkings.each do |working|%>
+          <p class="list-text mx-2 my-3 px-2 py-3"><%= working.text%></br>
+            <%= link_to("完了","/user_dones/#{working.id}",method: :post) %>
+          </p>
+        <% end %>
+      <% end %>
     </div>
     <div class="col-md user-dones mx-3 mt-5 h-75">
-      コンテンツC
+      完了
+      <% if @userDones %>
+        <% @userDones.each do |done|%>
+          <p class="list-text mx-2 my-3 px-2 py-3"><%= done.text%></p>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>
