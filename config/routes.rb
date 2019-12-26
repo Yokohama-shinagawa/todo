@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   resources :users, only: [:show,:destroy]
   
   resources :user_todos, only: [:create]
+  
+  resources :user_workings, only: [:create]
+  
+  post "user_workings/:id" => "user_workings#create"
+  
+  post "user_dones/:id" => "user_dones#create"
 end
