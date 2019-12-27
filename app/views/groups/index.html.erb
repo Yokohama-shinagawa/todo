@@ -1,0 +1,8 @@
+ぐうーぷの一覧</br>
+
+<% @groups.each do |group| %>
+    <%= link_to("#{group.name}",group_path(group)) %></br>
+<% end %>
+
+<%= link_to "グループを作る",new_group_path,class:"btn btn-primary" %>
+

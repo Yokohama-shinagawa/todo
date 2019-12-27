@@ -1,0 +1,6 @@
+グループ詳細ページ</br>
+
+メンバー
+<% @group.middle.each do |group_user| %>
+    </br><%= group_user.user.name %>
+<% end %>
