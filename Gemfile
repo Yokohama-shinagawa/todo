@@ -78,6 +78,7 @@ gem 'devise-i18n-views'
 #新規登録時の画像の追加
 gem 'carrierwave'
 gem 'rmagick'
+gem 'simple_form'
 
 group :production do
   gem 'rails_12factor'

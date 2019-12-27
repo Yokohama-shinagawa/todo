@@ -1,9 +1,7 @@
-<div>
-    <%= render("top/shared/todo") %>
-</div>
+
 <div class="container">
   <div class="row">
-    <div class="col-md user-todos mx-3 mt-5 h-75">
+    <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-todos">
       するべきこと
       <% if @userTodos %>
         <% @userTodos.each do |todo|%>
@@ -12,8 +10,14 @@
           </p>
         <% end %>
       <% end %>
+      
+      <div class="none todo-render">
+        <%= render("top/shared/todo") %>
+      </div>
+      <p class="add-todo">＋さらに追加</p>
     </div>
-    <div class="col-md user-workings mx-3 mt-5 h-75">
+    
+    <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-workings">
       作業中
       <% if @userWorkings%>
         <% @userWorkings.each do |working|%>
@@ -23,7 +27,8 @@
         <% end %>
       <% end %>
     </div>
-    <div class="col-md user-dones mx-3 mt-5 h-75">
+    
+    <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-dones">
       完了
       <% if @userDones %>
         <% @userDones.each do |done|%>
@@ -31,5 +36,6 @@
         <% end %>
       <% end %>
     </div>
+    
   </div>
 </div>

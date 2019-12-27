@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
         
   mount_uploader :image, ImageUploader #画像のアップロード
+  
+  has_many :middle
+  has_many :groupss, through: :middle
 end

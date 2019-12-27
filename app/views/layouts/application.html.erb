@@ -12,11 +12,32 @@
   <body>
   <header>
     <div class="bg-info clearfix">
-      <p type="text" class="float-left">Todoアプリ</p>
       <% if user_signed_in? %>
+      　<div class="dropdown open float-left">
+          <ul class="dropdown-menu">
+            <li class="active"><a href="#">メニュー1</a></li>
+            <li><a href="#">メニュー2</a></li>
+            <li><a href="#">メニュー3</a></li>
+            <li role="separator" class="divider"></li><!-- 横仕切り線 -->
+            <li><a href="#">その他リンク</a></li>
+          </ul>
+        </div>
+        <div class="btn-group">
+        	<button type="button" class="btn btn-secondary dropdown-toggle float-right" data-toggle="dropdown" aria-expanded="false">
+        		グループ
+        		<span class="caret"></span>
+        	</button>
+        	<ul class="dropdown-menu" role="menu">
+        	  <% session[:user_middle].each do |user_group| %>
+        		  <li role="presentation"><a role="menuitem" tabindex="-1" href="/groups/<%= user_group.group.id %>"><%= user_group.group.name %></a></li>
+        		<% end %>
+        	</ul>
+        </div>
+        <%= link_to "グループ一覧",groups_path,class:"btn btn-secondary float-right" %>
         <%= link_to "ログアウト",destroy_user_session_path, method: :delete,class:"btn btn-secondary float-right" %>
         <%= link_to "マイページ",user_path(current_user),class:"btn btn-secondary float-right" %>
       <% else %>
+
         <%= link_to "ログイン",new_user_session_path, class:"btn btn-secondary float-right" %>
         <%= link_to "新規登録",user_registration_path, method: :post, class:"btn btn-secondary float-right" %>
       <% end %>

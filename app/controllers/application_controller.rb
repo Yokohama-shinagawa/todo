@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
 
   # deviseコントローラーにストロングパラメータを追加        
   before_action :configure_permitted_parameters, if: :devise_controller?
+  
+  before_action :set_session
+  
+  def set_session
+    session[:user_middle] = current_user.middle
+  end
 
   protected
   def configure_permitted_parameters

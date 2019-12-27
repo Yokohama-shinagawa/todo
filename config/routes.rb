@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   post "user_workings/:id" => "user_workings#create"
   
   post "user_dones/:id" => "user_dones#create"
+  
+  resources :groups, only: [:index, :new, :create, :show]
 end
