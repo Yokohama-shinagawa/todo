@@ -1,0 +1,2 @@
+class GroupTodo < ApplicationRecord
+end
