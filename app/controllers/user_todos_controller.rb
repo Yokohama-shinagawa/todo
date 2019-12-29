@@ -1,13 +1,12 @@
 class UserTodosController < ApplicationController
   def create
-      @userTodo = UserTodo.create(text: todo_params[:text],
-                                  user_id: current_user.id
-                                  )
+      UserTodo.create(todo_params)
+      # binding.pry
       redirect_to("/")
   end
   
   private
     def todo_params
-        params.require(:user_todo).permit(:text)
+        params.require(:user_todo).permit(:text).merge(user_id: current_user.id)
     end
 end

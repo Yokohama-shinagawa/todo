@@ -8,7 +8,4 @@ class User < ApplicationRecord
   
   has_many :middle
   has_many :groupss, through: :middle
-  has_many :user_todos
-  has_many :user_workings
-  has_many :user_dones
 end

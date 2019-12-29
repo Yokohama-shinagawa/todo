@@ -1,4 +1,10 @@
 class GroupsController < ApplicationController
+  def top
+      @groupTodo = GroupTodo.new
+      @groupTodos = GroupTodo.where(group_id: params[:id])
+      @group_id = params[:id]
+  end
+  
   def index
     @groups = Group.all
   end

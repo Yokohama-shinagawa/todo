@@ -1,0 +1,6 @@
+<%= form_for(@groupTodo, :url => {:controller => :group_todos, :action => :create}) do |f| %>
+    <%= f.text_field :text, id: :text %>
+    <%= f.hidden_field :group_id, :value => @group_id %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+    <%= f.submit "追加"%>
+<% end %>
