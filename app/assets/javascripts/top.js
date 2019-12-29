@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load', function(){
   $(".add-todo").click(function(){
-     $(".todo-render").removeClass("none");
+     $(".todo-render").addClass("block");
       });
   });

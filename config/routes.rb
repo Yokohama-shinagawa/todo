@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   post "user_dones/:id" => "user_dones#create"
   
   resources :groups, only: [:index, :new, :create, :show]
+  get "groups/top/:id" => "groups#top"
+  
+  resources :group_todos, only: [:create]
 end

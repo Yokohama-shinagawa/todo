@@ -29,7 +29,7 @@
         	</button>
         	<ul class="dropdown-menu" role="menu">
         	  <% session[:user_middle].each do |user_group| %>
-        		  <li role="presentation"><a role="menuitem" tabindex="-1" href="/groups/<%= user_group.group.id %>"><%= user_group.group.name %></a></li>
+        		  <li role="presentation"><a role="menuitem" tabindex="-1" href="/groups/top/<%= user_group.group.id %>"><%= user_group.group.name %></a></li>
         		<% end %>
         	</ul>
         </div>
