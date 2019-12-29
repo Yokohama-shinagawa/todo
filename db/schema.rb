@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_27_095133) do
+ActiveRecord::Schema.define(version: 2019_12_28_013143) do
+
+  create_table "group_dones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "text"
+    t.integer "user_id"
+    t.integer "group_id"
+  end
+
+  create_table "group_todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "text"
+    t.integer "user_id"
+    t.integer "group_id"
+  end
 
   create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -42,6 +58,7 @@ ActiveRecord::Schema.define(version: 2019_12_27_095133) do
     t.datetime "updated_at", null: false
     t.string "text"
     t.integer "user_id"
+    t.integer "group_id"
   end
 
   create_table "user_todos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -49,6 +66,7 @@ ActiveRecord::Schema.define(version: 2019_12_27_095133) do
     t.datetime "updated_at", null: false
     t.string "text"
     t.integer "user_id"
+    t.integer "group_id"
   end
 
   create_table "user_workings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,6 +74,7 @@ ActiveRecord::Schema.define(version: 2019_12_27_095133) do
     t.datetime "updated_at", null: false
     t.string "text"
     t.integer "user_id"
+    t.integer "group_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

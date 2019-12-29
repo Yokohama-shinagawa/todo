@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
   before_action :set_session
   
   def set_session
-    session[:user_middle] = current_user.middle
+    if current_user
+      session[:user_middle] = current_user.middle
+    end
   end
 
   protected
