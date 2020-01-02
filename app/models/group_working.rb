@@ -1,0 +1,2 @@
+class GroupWorking < ApplicationRecord
+end
