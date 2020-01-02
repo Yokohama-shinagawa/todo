@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root "top#index"
+  root "users#top"
   
   resources :users, only: [:show,:destroy]
+  
+  get "users/top" => "users#top"
   
   resources :user_todos, only: [:create]
   

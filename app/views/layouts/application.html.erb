@@ -11,7 +11,7 @@
   </head>
   <body>
   <header>
-    <div class="bg-info clearfix">
+    <div class="clearfix">
       <% if user_signed_in? %>
       　<div class="dropdown open float-left">
           <ul class="dropdown-menu">
@@ -43,6 +43,10 @@
       <% end %>
     </div>
   </header>
-    <%= yield %>
+  <div class="bg-img">
+    <div class = "bg-mask">
+      <%= yield %>
+    </div>
+  </div>
   </body>
 </html>
