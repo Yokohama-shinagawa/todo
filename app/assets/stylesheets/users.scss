@@ -22,3 +22,15 @@
   padding:30px;
   margin:30px;
 }
+
+.bg-img{
+  background-image: url("/images/Canva - Person Sketching Dress on Printer Paper With Clip Board.jpg");
+  width:100vw;
+  height:100vh;
+  background-size:cover;
+}
+
+.bg-mask{
+  height: 100%;
+  background: rgba(255,255,255,0.5);
+}
