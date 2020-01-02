@@ -1,0 +1,2 @@
+class GroupDone < ApplicationRecord
+end

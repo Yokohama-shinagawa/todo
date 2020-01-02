@@ -3,6 +3,8 @@ class GroupsController < ApplicationController
       @groupTodo = GroupTodo.new
       @groupTodos = GroupTodo.where(group_id: params[:id])
       @group_id = params[:id]
+      @groupWorkings = GroupWorking.where(group_id: params[:id])
+      @groupDones = GroupDone.where(group_id: params[:id])
   end
   
   def index
