@@ -7,6 +7,7 @@
           <% @userTodos.each do |todo|%>
             <p class="list-text mx-2 my-3 px-2 py-3"><%= todo.text%></br>
               <%= link_to("作業開始","/user_workings/#{todo.id}",method: :post) %>
+              <%= link_to("削除","/user_todos/#{todo.id}",method: :delete) %>
             </p>
           <% end %>
         <% end %>

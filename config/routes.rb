@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   get "users/top" => "users#top"
   
-  resources :user_todos, only: [:create]
+  resources :user_todos, only: [:create,:destroy]
   
   post "user_workings/:id" => "user_workings#create"
   
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
   get "groups/top/:id" => "groups#top"
   
-  resources :group_todos, only: [:create]
+  resources :group_todos, only: [:create,:destroy]
   
   post "group_workings/:id" => "group_workings#create"
   
