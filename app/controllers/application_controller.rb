@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # ログイン済ユーザーのみにアクセスを許可
-  before_action :authenticate_user!, except: :display
+  before_action :authenticate_user!, except: :top
 
   # deviseコントローラーにストロングパラメータを追加        
   before_action :configure_permitted_parameters, if: :devise_controller?

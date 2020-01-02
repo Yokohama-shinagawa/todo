@@ -24,13 +24,27 @@
 }
 
 .bg-img{
-  background-image: url("/images/Canva - Person Sketching Dress on Printer Paper With Clip Board.jpg");
+  background-image: url("/images/photoshop.png");
   width:100vw;
   height:100vh;
   background-size:cover;
+  position:fixed;
 }
 
-.bg-mask{
-  height: 100%;
-  background: rgba(255,255,255,0.5);
+.login-page{
+  text-align:center;
+  background-color:#8ac6d1;
+  margin:0 auto;
+  padding-top:50px;
+  padding-bottom:50px;
+  margin-top:100px;
+  border-radius:20px;
+}
+
+.field{
+  padding:10px;
+}
+
+.regisration-page{
+  text-align:center;
 }
