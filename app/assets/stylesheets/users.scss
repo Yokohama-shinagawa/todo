@@ -24,7 +24,7 @@
 }
 
 .bg-img{
-  background-image: url("/images/photoshop.png");
+  background-image: url("/images/Todo application.png");
   width:100vw;
   height:100vh;
   background-size:cover;
@@ -47,4 +47,24 @@
 
 .regisration-page{
   text-align:center;
+}
+
+.user-todos{
+  background-color:#8ac6d1;
+}
+
+.user-workings{
+  background-color:#8ac6d1;
+}
+
+.user-dones{
+  background-color:#8ac6d1;
+}
+
+.list{
+  height:75%;
+}
+
+.list-text{
+  background-color:white;
 }

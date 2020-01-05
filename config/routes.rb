@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   
   resources :users, only: [:show,:destroy]
   
-  get "users/top" => "users#top"
-  
   resources :user_todos, only: [:create,:destroy]
   
   post "user_workings/:id" => "user_workings#create"
