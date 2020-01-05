@@ -1,0 +1,2 @@
+module ShimonoHelper
+end

@@ -6,24 +6,15 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <% self_css_path = "/assets/"+controller.controller_name  %>
     <!-- レスポンシブ対応-->
   </head>
   <body>
   <header>
-    <div class="clearfix">
       <% if user_signed_in? %>
-      　<div class="dropdown open float-left">
-          <ul class="dropdown-menu">
-            <li class="active"><a href="#">メニュー1</a></li>
-            <li><a href="#">メニュー2</a></li>
-            <li><a href="#">メニュー3</a></li>
-            <li role="separator" class="divider"></li><!-- 横仕切り線 -->
-            <li><a href="#">その他リンク</a></li>
-          </ul>
-        </div>
-        <div class="btn-group">
-        	<button type="button" class="btn btn-secondary dropdown-toggle float-right" data-toggle="dropdown" aria-expanded="false">
+        <div class="header-box">
+        <div class="btn-group header-item">
+        	<button type="button" onfocus="this.blur();" class="btn dropdown-toggle group-index-btn" data-toggle="dropdown" aria-expanded="false">
         		グループ
         		<span class="caret"></span>
         	</button>
@@ -33,18 +24,17 @@
         		<% end %>
         	</ul>
         </div>
-        <%= link_to "グループ一覧",groups_path,class:"btn btn-secondary float-right" %>
-        <%= link_to "ログアウト",destroy_user_session_path, method: :delete,class:"btn btn-secondary float-right" %>
-        <%= link_to "マイページ",user_path(current_user),class:"btn btn-secondary float-right" %>
+          <%= link_to "グループ一覧",groups_path,class:"header-item" %>
+          <%= link_to "ログアウト",destroy_user_session_path, method: :delete,class:"header-item" %>
+          <%= link_to "マイページ",user_path(current_user),class:"header-item" %>
+        </div>
       <% else %>
-
-        <%= link_to "ログイン",new_user_session_path, class:"btn btn-secondary float-right" %>
-        <%= link_to "新規登録",user_registration_path, method: :post, class:"btn btn-secondary float-right" %>
+      <div class="header-box">
+        <%= link_to "ログイン",new_user_session_path, class:"header-item" %>
+        <%= link_to "新規登録",user_registration_path, method: :post, class:"header-item" %>
+      </div>
       <% end %>
-    </div>
   </header>
-  <div class="bg-img">
       <%= yield %>
-  </div>
   </body>
 </html>
