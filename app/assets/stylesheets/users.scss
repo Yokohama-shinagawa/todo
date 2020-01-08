@@ -7,22 +7,18 @@
     color:white;
   }
 }
-
 .none{
   display:none;
 }
-
 .block{
   display:block;
 }
-
 .user-destroy-form{
   background-color:gray;
   width:300px;
   padding:30px;
   margin:30px;
 }
-
 .bg-img{
   background-image: url("/images/Todo application.png");
   width:100vw;
@@ -30,41 +26,45 @@
   background-size:cover;
   position:fixed;
 }
-
 .login-page{
   text-align:center;
-  background-color:#8ac6d1;
+  background-color:white;
   margin:0 auto;
   padding-top:50px;
-  padding-bottom:50px;
-  margin-top:100px;
-  border-radius:20px;
+  padding:50px 50px;
+  margin-top:50px;
+  border-radius:5px;
 }
-
 .field{
   padding:10px;
 }
-
 .regisration-page{
   text-align:center;
 }
-
 .user-todos{
   background-color:#8ac6d1;
 }
-
 .user-workings{
   background-color:#8ac6d1;
 }
-
 .user-dones{
   background-color:#8ac6d1;
 }
-
 .list{
   height:75%;
 }
-
 .list-text{
   background-color:white;
+}
+
+//login submit page
+.devise-page{
+  background-color:rgba(126,126,126,0.2);
+  height:100vh;
+}
+.devise-form{
+  margin:15px 0;
+}
+.devise-share{
+  color:black;
 }
