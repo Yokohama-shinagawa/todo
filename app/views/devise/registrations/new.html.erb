@@ -4,6 +4,7 @@
       <div class="login-page">
         <h4>memotaに登録</h4>
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.text_field :name, autofocus: true, autocomplete: "name",class: "form-control devise-form", :placeholder => "ユーザ名" %>
             <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control devise-form", :placeholder => "メールアドレス" %>
             <%= f.password_field :password, autocomplete: "current-password",class: "form-control devise-form", :placeholder => "パスワード" %>
             <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "form-control devise-form", :placeholder => "パスワード確認用" %>

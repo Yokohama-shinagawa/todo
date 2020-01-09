@@ -1,4 +1,6 @@
 <%= form_for(@userTodo, :url => {:controller => :user_todos, :action => :create}) do |f| %>
-    <%= f.text_field :text, id: :text %>
-    <%= f.submit "追加"%>
+    <div class="add-task-form">
+        <%= f.text_field :text, id: :text,class:"form-control" %>
+        <%= f.submit "追加",class:"btn btn-outline-primary"%>
+    </div>
 <% end %>

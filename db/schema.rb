@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_01_142013) do
+ActiveRecord::Schema.define(version: 2020_01_03_053306) do
+
+  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "text"
+    t.integer "user_id"
+    t.integer "group_id"
+    t.integer "group_todo_id"
+    t.integer "group_working_id"
+    t.integer "group_done_id"
+  end
 
   create_table "group_dones", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false

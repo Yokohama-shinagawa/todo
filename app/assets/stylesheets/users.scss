@@ -7,11 +7,23 @@
     color:white;
   }
 }
+.user-group-top-page{
+  background-image: url("/images/Canva - Girl in Blue Sweatshirt and Pink Skit in Jumpshot Photo.jpg");
+  background-size:cover;
+  height:100vh;
+}
+.list-p{
+  font-weight:bold;
+  margin:15px 0;
+}
 .none{
   display:none;
 }
 .block{
   display:block;
+}
+.user-lists{
+  border-radius:5px;
 }
 .user-destroy-form{
   background-color:gray;
@@ -25,6 +37,9 @@
   height:100vh;
   background-size:cover;
   position:fixed;
+}
+.add-todo{
+  cursor:pointer;
 }
 .login-page{
   text-align:center;
@@ -42,21 +57,27 @@
   text-align:center;
 }
 .user-todos{
-  background-color:#8ac6d1;
+  background-color:rgba(238, 238, 238, 0.9);
 }
 .user-workings{
-  background-color:#8ac6d1;
+  background-color:rgba(238, 238, 238, 0.9);
 }
 .user-dones{
-  background-color:#8ac6d1;
+  background-color:rgba(238, 238, 238, 0.9);
 }
 .list{
   height:75%;
 }
 .list-text{
   background-color:white;
+  border-radius:5px;
 }
-
+.add-task-form{
+  display:flex;
+  input{
+    margin-right:15px;
+  }
+}
 //login submit page
 .devise-page{
   background-color:rgba(126,126,126,0.2);
@@ -68,3 +89,4 @@
 .devise-share{
   color:black;
 }
+

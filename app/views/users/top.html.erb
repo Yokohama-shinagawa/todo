@@ -1,46 +1,50 @@
-<% if user_signed_in? %>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-todos">
-        するべきこと
-        <% if @userTodos %>
-          <% @userTodos.each do |todo|%>
-            <p class="list-text mx-2 my-3 px-2 py-3"><%= todo.text%></br>
-              <%= link_to("作業開始","/user_workings/#{todo.id}",method: :post) %>
-              <%= link_to("削除","/user_todos/#{todo.id}",method: :delete) %>
-            </p>
+<div class="user-group-top-page">
+  <% if user_signed_in? %>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-todos user-lists">
+          <p class="list-p">するべきこと</p> 
+          <% if @userTodos %>
+            <% @userTodos.each do |todo|%>
+              <p class="list-text mx-2 my-3 px-2 py-3"><%= todo.text%></br>
+                <%= link_to("作業開始","/user_workings/#{todo.id}",method: :post) %>
+                <%= link_to "/user_todos/#{todo.id}",method: :delete do %>
+                  <i class="fas fa-trash-alt"></i>
+                <% end %>
+              </p>
+            <% end %>
           <% end %>
-        <% end %>
-        
-        <div class="none todo-render">
-          <%= render("top/shared/todo") %>
+          
+          <div class="none todo-render">
+            <%= render("top/shared/todo") %>
+          </div>
+          <p class="add-todo list-p">＋さらに追加</p>
         </div>
-        <p class="add-todo">＋さらに追加</p>
-      </div>
-      
-      <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-workings">
-        作業中
-        <% if @userWorkings%>
-          <% @userWorkings.each do |working|%>
-            <p class="list-text mx-2 my-3 px-2 py-3"><%= working.text%></br>
-              <%= link_to("完了","/user_dones/#{working.id}",method: :post) %>
-            </p>
+        
+        <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-workings user-lists">
+          <p class="list-p">作業中</p>
+          <% if @userWorkings%>
+            <% @userWorkings.each do |working|%>
+              <p class="list-text mx-2 my-3 px-2 py-3"><%= working.text%></br>
+                <%= link_to("完了","/user_dones/#{working.id}",method: :post) %>
+              </p>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
-      
-      <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-dones">
-        完了
-        <% if @userDones %>
-          <% @userDones.each do |done|%>
-            <p class="list-text mx-2 my-3 px-2 py-3"><%= done.text%></p>
+        </div>
+        
+        <div class="col-sm-10 col-md-5 col-lg-3 mx-4 my-4 user-dones user-lists">
+          <p class="list-p">完了</p>
+          <% if @userDones %>
+            <% @userDones.each do |done|%>
+              <p class="list-text mx-2 my-3 px-2 py-3"><%= done.text%></p>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
+        
       </div>
-      
     </div>
-  </div>
-<% else %>
-  <div class="bg-img">
-  </div>
-<% end %>
+  <% else %>
+    <div class="bg-img">
+    </div>
+  <% end %>
+</div>
