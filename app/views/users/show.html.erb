@@ -1,16 +1,31 @@
-<div class="mx-auto" style="width: 200px;">
+
   <div class="mypage">
-    ユーザ名：<%= current_user.email %>
+    <div class="user-information">
+      <p>ユーザ名</p>
+      <p class="information-child"><%= current_user.name %></p>
+      <p>メールアドレス</p>
+      <p class="information-child"><%= current_user.email %></p>
+      <p>アカウント作成日</p>
+      <p class="information-child"><%= current_user.created_at.to_s(:datetime) %></p>
+    </div>
     <div class="btn-group">
-    <%= link_to("編集",edit_user_registration_path,class:"user-edit-btn btn btn-primary") %>
-    <button type="button" class="btn btn-danger user-destroy-btn">アカウント削除</button>
+      <div class="btn-child">
+        <%= link_to("編集",edit_user_registration_path,class:"user-edit-btn btn btn-outline-primary") %>
+      </div>
+      <div class="btn-child">
+        <button type="button" class="btn btn-outline-danger user-destroy-btn">アカウント削除</button>
+      </div>
     </div>
   </div>
-</div>
 
 
 <div class="user-destroy-form none">
   <p>本当に削除しますか？</p>
-  <%=link_to("はい", user_registration_path,method: :delete,class: "btn btn-primary") %>
-  <button type="button" class="btn btn-danger reject-btn">いいえ</button>
+  <div class="btn-group">
+    <div class="btn-child">
+      <%=link_to("はい", user_registration_path,method: :delete,class: "btn btn-outline-primary") %>
+    </div>
+    <div class="btn-child">
+      <button type="button" class="btn btn-outline-danger reject-btn">いいえ</button>
+    </div>
 </div>
