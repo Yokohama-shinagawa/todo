@@ -1,0 +1,17 @@
+.group-index-page{
+  text-align:left;
+  height:300px;
+  overflow:auto;
+  a{
+    font-weight:bold;
+  }
+}
+.group-index-link{
+  padding:10px 0;
+  &:hover{
+    background-color:rgba(0, 102, 102, 0.2);
+  }
+}
+.group-index-bottun{
+  margin-top:20px;
+}

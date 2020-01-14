@@ -1,8 +1,13 @@
-グループ作成
-
-<%= simple_form_for @group do |f| %>
-  <%= f.label :グループ名 %>
-  <%= f.text_field :name, id: :name %>
-  <%= f.collection_check_boxes :user_ids, User.all, :id, :name %>
-  <%= f.submit "グループを作成" %>
-<% end %>
+<div class="user-edit-page group-new-page">
+  <h4>グループ作成</h4>
+  <%= simple_form_for @group do |f| %>
+    <%= f.text_field :name, id: :name, :placeholder=>"グループ名",class: "form-control" %>
+    <div class="checkbox-parent">
+    <%= f.collection_check_boxes :user_ids, User.all, :id, :name do |b| %>
+        <%= b.check_box %>
+        <%= b.object.name %>
+    <% end %>
+    </div>
+    <%= f.submit "グループを作成",class: "btn btn-outline-primary" %>
+  <% end %>
+</div>

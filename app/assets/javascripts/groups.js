@@ -7,4 +7,6 @@ $(document).on('turbolinks:load', function(){
      $(".mypage").removeClass("none");
      $(".user-destroy-form").addClass("none");
       });  
-  });
+});
+  
+  
