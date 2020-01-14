@@ -1,8 +1,12 @@
-ぐうーぷの一覧</br>
-
-<% @groups.each do |group| %>
-    <%= link_to("#{group.name}",group_path(group)) %></br>
-<% end %>
-
-<%= link_to "グループを作る",new_group_path,class:"btn btn-primary" %>
+<div class="user-edit-page">
+    <h5>グループの一覧</h5>
+    <div class="group-index-page">
+        <% @groups.each do |group| %>
+            <div class="group-index-link">
+                <%= link_to "##{group.name}","/groups/top/#{group.id}" %>
+            </div>
+        <% end %>
+    </div>
+    <%= link_to "グループを作る",new_group_path,class:"btn btn-outline-primary group-index-bottun" %>
+</div>
 

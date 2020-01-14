@@ -24,9 +24,10 @@
             		<span class="caret"></span>
             	</button>
             	<ul class="dropdown-menu" role="menu">
-            	  <% session[:user_middle].each do |user_group| %>
-            		  <li role="presentation"><a role="menuitem" tabindex="-1" href="/groups/top/<%= user_group.group.id %>"><%= user_group.group.name %></a></li>
-            		<% end %>
+              	  <% session[:user_middle].each do |user_group| %>
+              		  <li role="presentation" class="group-list-a"><a role="menuitem" tabindex="-1" href="/groups/top/<%= user_group.group.id %>" class="group-list-a"><%= user_group.group.name %></a></li>
+              		<% end %>
+            		  <li role="presentation" class="group-list-option"><a role="menuitem" tabindex="-1" href="/groups/new" >+グループを作る</a></li>
             	</ul>
             </div>
                 <%= link_to "グループ一覧",groups_path,class:"header-item" %>

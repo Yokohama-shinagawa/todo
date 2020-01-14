@@ -31,16 +31,20 @@ header{
 }
 a:hover{
   text-decoration:none;
-  color:red;
+  color:black;
 }
 .header-box{
   display:flex;
   justify-content:space-between;
 }
 .header-item{
-  margin:0 20px;
+  padding:20px 15px;
   color:black;
   font-family: "Hannari";
+  height:100%;
+  &:hover{
+    background-color:rgba(255, 102, 102, 0.5);
+  }
 }
 .individual-page{
   background-image: url("/images/Canva - Girl in Blue Sweatshirt and Pink Skit in Jumpshot Photo.jpg");
@@ -49,6 +53,25 @@ a:hover{
   width:100vw;
   position:fixed;
 }
+.dropdown-menu{
+  text-align:center;
+  li{
+    &:hover{
+    background-color:rgba(255, 102, 102, 0.5);
+    }
+  }
+}
+.group-list-option{
+  a{color: blue;
+    font-weight:bold;
+  }
+}
+.group-list-a{
+  a{
+    color:black;
+  }
+}
+
 
 
 
