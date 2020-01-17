@@ -1,5 +1,6 @@
 class GroupsController < ApplicationController
   def top
+      @group = Group.find(params[:id])
       @groupTodo = GroupTodo.new
       @groupTodos = GroupTodo.where(group_id: params[:id])
       @group_id = params[:id]
